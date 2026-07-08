@@ -1,17 +1,61 @@
-# exemplovideolocal
+# Flutter Video Player
 
-A new Flutter project.
+Aplicativo simples em Flutter para reprodução de vídeo local, utilizando o pacote `video_player`.
 
-## Getting Started
+## 📱 Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Reprodução de vídeo armazenado localmente (assets)
+- Botão para pausar/reproduzir o vídeo
+- Player exibido com a proporção (aspect ratio) correta
+- Indicador de carregamento enquanto o vídeo é inicializado
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tecnologias
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- [Flutter](https://flutter.dev/)
+- [video_player](https://pub.dev/packages/video_player)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📂 Estrutura do projeto
+
+```
+lib/
+  main.dart          # Tela principal com o player de vídeo
+assets/
+  videos/
+    video_exemplo.mp4 # Vídeo local reproduzido no app
+```
+
+## ▶️ Como rodar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/LuizPauloSoares/flutter-video-player.git
+   cd flutter-video-player
+   ```
+
+2. Instale as dependências:
+   ```bash
+   flutter pub get
+   ```
+
+3. Certifique-se de que o vídeo está na pasta `assets/videos/` e que o `pubspec.yaml` está configurado para incluir os assets:
+   ```yaml
+   flutter:
+     assets:
+       - assets/videos/
+   ```
+
+4. Execute o app:
+   ```bash
+   flutter run
+   ```
+
+## 📌 Observações
+
+- O vídeo utilizado é local (asset), não é carregado via URL/rede.
+- Para trocar o vídeo, basta substituir o arquivo em `assets/videos/` e ajustar o nome no `VideoPlayerController.asset()`.
+
+## 👤 Autor
+
+Luiz Paulo Soares
+- [LinkedIn](https://linkedin.com/in/luiz-paulo-soares/)
+- [Instagram](https://instagram.com/lu1z_st)
